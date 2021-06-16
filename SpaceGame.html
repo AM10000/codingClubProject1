@@ -7,42 +7,30 @@
         <title>Document</title>
     </head>
     <style>
-        html {
-            cursor: crosshair;
-        }
-        span {
-            position: relative;
-            background-color: white;
-            z-index: 3;
-        }
         .Options{
             font-family: 'Comic Sans MS';
             position: absolute;
-            background-color: black;
+            background-color: transparent;
             height: 72px;
-            width: 433px;
+            width: 100%;
             z-index: 1;
-            border: 1px solid white;
             text-align: center;
             color: white;
             font-size: 50px;
             vertical-align: middle;
         }
     </style>
-    <body style="background-color: black;">
-        <div style="margin-left: 450px; margin-top: 299px;" class="Options" id="HTP">How To Play</div>
-        <div style="margin-left: 535px; margin-top: 270px;" id="Play" class="Options">Play</div>
-        <div style="position: relative; z-index: 0;"><img src="2021-06-02.png" style="width: 100%; height: 100%; position: relative; z-index: 0;"><div><span style="z-index: 1;"></span></div></div>
+    <body style="background-color: black; overflow: hidden;">
+        <div style="width: 100%; background-color: transparent; margin-top: 17.5%;" id="Play" class="Options">Play</div>
+        <div style="width: 100%; background-color: transparent; margin-top: 23%;" id="HTP" class="Options">How To Play</div>
+        <div style="margin-top: 28.5%;" id="Achievements" class="Options">Achievements</div>
+        <div style="position: relative; z-index: 0;"><img src="2021-06-02.png" style="width: 100%; height: 100%; position: relative; z-index: 0;"></div>
         
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
-        $(document).mousemove(function(event){ 
-            var x = event.pageX;
-            var y = event.pageY;
-            $("span").text(x + ", " + y); 
-        });
+        $(window).resize(function () {
+            var a = $('.Options').css('font-size', window.innerWidth / 30);
         });
     </script>
 </html>
