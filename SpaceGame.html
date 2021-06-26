@@ -1,2 +1,37 @@
-<html>
-    
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>(Name of game)</title>
+    </head>
+    <style>
+        .Options{
+            font-family: 'Comic Sans MS';
+            position: absolute;
+            background-color: transparent;
+            height: 72px;
+            width: 100%;
+            z-index: 1;
+            text-align: center;
+            color: white;
+            font-size: 50px;
+            vertical-align: middle;
+        }
+    </style>
+    <body style="background-color: black; overflow: hidden;">
+        <div style="width: 100%; background-color: transparent; margin-top: 17.5%;" id="Play" class="Options">Play</div>
+        <div style="width: 100%; background-color: transparent; margin-top: 23%;" id="HTP" class="Options">How To Play</div>
+        <div style="margin-top: 28.5%;" id="Achievements" class="Options">Achievements</div>
+        <div style="position: relative; z-index: 0;"><img src="2021-06-02.png" style="width: 100%; height: 100%; position: relative; z-index: 0;"></div>
+        
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(window).resize(function () {
+            var a = $('.Options').css('font-size', window.innerWidth / 30);
+        });
+    </script>
+</html>
